@@ -10,8 +10,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/app.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -22,6 +21,16 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
+
+        <div class="vieos">
+            <ul id="videos">
+
+            </ul>
+
+  <img src="" alt="">
+
+        </div>
+
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -29,6 +38,36 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
+
+            var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                   // Typical action to be performed when the document is ready:
+                   var response = xhttp.responseText;
+                   response = JSON.parse(response);
+                  var videos = response.video;
+
+                  var output = "";
+                   for(var i =0; i<videos.length; i++){
+                     output += '<li><img src=' + videos[i].img + ' alt=""></li>'
+                   }
+
+                   document.getElementById('videos').innerHTML = output;
+                }
+              };
+
+              xhttp.open("GET", "videos.json", true);
+              xhttp.send();
+
+
+
+
+
+
+
+
+
+
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
