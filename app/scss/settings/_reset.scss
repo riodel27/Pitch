@@ -20,6 +20,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 	vertical-align: baseline;
 	background: transparent;
 	font-family: 'Lato', sans-serif;
+	letter-spacing: 0.5px;
 
 }
 /* -------------------------- FONT RESPONSIVE TYPOGRAPHY SETTINGS --------------- */
@@ -45,6 +46,10 @@ a{
 
 li{
 	font-size: 0.875rem;
+}
+
+h1{
+	font-size: 40px;
 }
 /* -------------------------- FONT RESPONSIVE TYPOGRAPHY SETTINGS --------------- */
 

@@ -1,3 +1,123 @@
 .hero{
   background-color: #ffa244;
+  padding: 40px 20px 50px 20px;
+  //max-width: 100%;
+  .hero-left-content{
+    background-color: white;
+    padding: 0 20px 30px 20px;
+    input{
+      border: 0.1px solid #eeeeee;
+      width: 100%;
+      margin:20px 0 0 0;
+    }
+
+    .fullname{
+      background-image: url('../../img/user-icon.png');
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      padding: 8px 0 8px 35px;
+      font-style:italic;
+      color: #cccccc;
+    }
+    .fullname::placeholder{
+      font-style:italic;
+      color: #cccccc;
+      font-size: 12px;
+    }
+
+    .email{
+      background-image: url('../../img/envelope-icon.png');
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      padding: 8px 0 8px 35px;
+      font-style:italic;
+      color: #cccccc;
+    }
+    .email::placeholder{
+      font-style:italic;
+      color: #cccccc;
+      font-size: 12px;
+    }
+    .password{
+      background-image: url('../../img/key.png');
+      background-repeat: no-repeat;
+      background-position: 15px 10px;
+      padding: 8px 0 8px 35px;
+      font-style:italic;
+      color: #cccccc;
+    }
+    .password::placeholder{
+      font-style: italic;
+      color: #cccccc;
+      font-size: 12px;
+    }
+    .btn-create-account{
+      background-color: #86b701;
+      padding: 13px 50px;
+      color: white;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 11px;
+      color: #888888;
+      margin-bottom: 18px;
+      line-height: 2;
+      letter-spacing: 0.5px;
+    }
+    strong{
+      color: black;
+
+    }
+    .fb{
+      background-color: #20518c;
+      color: white;
+      font-size: 11px;
+      padding: 7px 20px 8px 20px;
+      letter-spacing: 1px;
+      strong{
+        color: white;
+      }
+    }
+  }
+
+  .hero-right{
+    padding: 0 10px 0 10px;
+  }
+
+  .hero-right-content{
+
+    padding-top: 30px;
+
+    span{
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h1{
+      color: white;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 1;
+    }
+    p{
+      color: white;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    ul{
+      padding-top: 20px;
+
+      li{
+        font-size: 15px;
+        color: white;
+        font-style: italic;
+        list-style-image: url('../../img/check-icon.png');
+        list-style-position: inside;
+        margin-top: 10px;
+      }
+    }
+
+  }
 }
