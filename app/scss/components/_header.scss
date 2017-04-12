@@ -1,0 +1,80 @@
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 10px 0 0 0;
+  .logo{
+    flex: 1 70% ;
+    padding: 5px 0 0 20px;
+  }
+  .header-nav{
+    flex: 1 100%;
+    order: 2;
+    margin: 10px 0 0 0;
+    span{
+      font-size: 0.625rem;
+    }
+    a{
+      color: #aaaaaa;
+      font-size:  0.75rem;
+      font-weight: bold;
+    }
+    a:hover{
+      span{
+        font-weight: bold;
+        color: #aaaaaa;
+      }
+      color: #da3610;
+    }
+    #browse{
+      padding-right: 20px;
+      background-image: url('../../img/drop-icon.png');
+      background-repeat: no-repeat;
+      background-position: right -0px;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      flex : 1;
+      padding: 25px;
+    }
+
+  }
+  .search-form{
+    flex: 1 100%;
+    order: 3;
+    padding: 20px 25px 20px 25px;
+    input{
+      font-size:  0.8125rem;
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      width: 100%;
+      color: #aaaaaa;
+      border: 0.1px solid #eeeeee;
+      background-image: url('../../img/header-searchicon.png');
+      background-repeat: no-repeat;
+      background-position: 6px;
+      padding: 5px 28px;
+    }
+    input::placeholder{
+      color: #aaaaaa;
+    }
+  }
+  .header-account{
+    flex: 1 30%;
+    order: 1;
+    padding-top: 10px;
+    .login{
+      color: #888888;
+      font-size: 0.625rem;
+      background-image: url('../../img/key.png'),url('../../img/drop-icon.png') ;
+      background-repeat: no-repeat;
+      background-position: 0 , right;
+      padding: 2px 15px 2px 15px;
+    }
+  }
+}
+.hidden{
+  display: none;
+}

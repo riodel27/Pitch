@@ -1,0 +1,95 @@
+{
+	"video":
+  [
+    {
+			"img": "/img/featured-vid1.png",
+			"duration": "4min",
+			"title": "The Strangers Project",
+			"description": "A multi media installation page...",
+			"author": "Susan O'Brien",
+			"date": "2 months ago",
+			"views": "200K"
+		},
+    {
+			"img": "/img/featured-vid2.png",
+			"duration":"1 hr 2 min",
+			"title": "Foldio, BIGGER & SMARTER",
+			"description": "foldio is the first pop up studio for ....",
+			"author": "Orange Monkey",
+			"date": "10 months ago",
+			"views": "2.3M"
+		},
+    {
+      "img": "/img/featured-vid3.png",
+      "duration":"48 sec",
+      "title": "Freaker Feet! 127 USA made sock designs!",
+      "description": "Let's reclaim the import-dominated sock industry! Help us launch 127 ...",
+      "author": "by Zach Crain",
+      "date": "2 weeks ago",
+      "views": "85.5k"
+    },
+    {
+      "img": "/img/featured-vid4.png",
+      "duration":"3 min",
+      "title": "Shadows of Esteren - A Medieval Horror RPG: Occultism",
+      "description": "A medieval role-playing game somewhere between Ravenloft, Game ...",
+      "author": "by Jim Searcy",
+      "date": "3 weeks ago",
+      "views": "884.1K"
+    },
+    {
+      "img": "/img/featured-vid5.png",
+      "duration":"1 min",
+      "title": "Swish N' Flick Book Candles",
+      "description": "Handmade Magical candles to make you feel like you're in another world!",
+      "author": "by Krystalle Wetz...",
+      "date": "3 weeks ago",
+      "views": "215.7K"
+    },
+    {
+      "img": "/img/featured-vid6.png",
+      "duration":"2 min",
+      "title": "Fevertone's Full Length Album 2015",
+      "description": "The Fevertones have a new album's worth of material ready, help us ...",
+      "author": "by Jackson Cavalier",
+      "date": "3 days ago",
+      "views": "25K"
+    },
+    {
+      "img": "/img/featured-vid7.png",
+      "duration":"53 min",
+      "title": "Ruku: a Rubik's cube solving robot for STEM education.",
+      "description": "Ruku: a Rubik's cube solving robot for STEM education. Teaching ...",
+      "author": "by Gray Robot",
+      "date": "1 month ago",
+      "views": "3.7M"
+    },
+    {
+      "img": "/img/featured-vid8.png",
+      "duration":"33 min",
+      "title": "Cephalovepod Letterpress Valentine's Card SBPxPhineas",
+      "description": "Letterpress card featuring 'Cephalovepod' heart-shaped octopus ima...",
+      "author": "by Eric Mersmann",
+      "date": "2 month ago",
+      "views": "10.5K"
+    },
+    {
+      "img": "/img/featured-vid9.png",
+      "duration":"45 min",
+      "title": "PERSU: Redefining Gym Bags for the Modern & Active Lifes...",
+      "description": "Functional, sleek, and durable sports luxe athletic bags designed to simp... ...",
+      "author": "by PERSU",
+      "date": "6 months ago",
+      "views": "1.8M"
+    },
+    {
+      "img": "/img/featured-vid10.png",
+      "duration":"30 sec",
+      "title": "CHALLENGING SEXUAL ASSAULT AT UVA",
+      "description": "Using a play about a powerful Frenchman sexually assaulting a ...",
+      "author": "by John Binkley",
+      "date": "6 months ago",
+      "views": "78K"
+    }
+	]
+}

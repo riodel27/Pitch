@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/app.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -19,17 +20,98 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-
-        <div class="vieos">
-            <ul id="videos">
-
+        <div class="header">
+          <div class="logo">
+            <a href=""><img src="img/header-logo.png" alt=""></a>
+          </div>
+          <div class="header-nav">
+            <ul>
+              <li class="browse"><a href="#" id="browse"><span >BROWSE</span> <br> Channels</a></li>
+              <li><a href="#"><span id="video-resources">VIDEO</span> <br>Resources</a></li>
+              <li><a href="#"><span id="see">SEE</span> <br>Pricing</a></li>
             </ul>
-
-  <img src="" alt="">
-
+          </div>
+          <div class="search-form">
+            <input type="text" placeholder="Search videos">
+          </div>
+          <div class="header-account">
+            <a href="#" class="button hidden">CREATE AN ACCOUNT</a>
+            <a href="#" class="button login">LOG IN</a>
+          </div>
         </div>
+
+        <div class="hero">
+          <div class="hero-left">
+            <div class="hero-left-content">
+              <form action="">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Password">
+                <input type="submit" name="create-account" value="create-account">
+              </form>
+              <p>By joining PitchPlus, you agree to our
+                  Terms of Service and Privacy Policy</p>
+              <a href="#">join with Facebook</a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="hero-right-content">
+              <h1>Video-Driven Global Marketplace</h1>
+              <p>Pitch      Promote      Advertise</p>
+              <ul>
+                <li>Sell Products, Items & Goods</li>
+                <li>Promote Business & Events</li>
+                <li>Basic & Pro Accounts</li>
+              </ul>
+              <ul>
+                <li>In-Video Call to Action</li>
+                <li>Full HD Playback</li>
+                <li>and many more!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-videos">
+          <h1>FEATURED VIDEOS</h1>
+          <div id="featured-video-holder">
+
+          </div>
+        </div>
+
+
+
+        <div class="mostwatched-videos">
+          <h1>MOST WATCHED VIDEOS</h1>
+        </div>
+        <div class="trending-videos">
+          <h1>TRENDING VIDEOS</h1>
+        </div>
+
+        <div class="footer">
+          <div class="footer-logo">
+            <a href=""><img src="img/footer-logo.png" alt=""></a>
+          </div>
+          <div class="footer-flag">
+            <a href="">COUNTRY</a>
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Guidelines</a></li>
+              <li><a href="">FAQs</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Copyrigt</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -39,33 +121,32 @@
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
 
-            var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                   // Typical action to be performed when the document is ready:
-                   var response = xhttp.responseText;
-                   response = JSON.parse(response);
-                  var videos = response.video;
+                  var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                         // Typical action to be performed when the document is ready:
+                         var response = xhttp.responseText;
+                         response = JSON.parse(response);
+                        var videos = response.video;
 
-                  var output = "";
-                   for(var i =0; i<videos.length; i++){
-                     output += '<li><img src=' + videos[i].img + ' alt=""></li>'
-                   }
+                        var output = "";
+                         for(var i =0; i<videos.length; i++){
+                           output += '<img src=' + videos[i].img + '>' +
+                                      '<span class="duration">' + videos[i].duration + '</span>' +
+                                     '<p>' + videos[i].description + '</p>' +
+                                     '<span class="autor">' + videos[i].author + '</span>'+
+                                      '<span class="date">' + videos[i].date + '</span>'+
+                                      '<span class = "views">' + videos[i].views + ' VIEWS' + '</span>'+
+                                     '<hr>;'
+                         }
 
-                   document.getElementById('videos').innerHTML = output;
-                }
-              };
+                         document.getElementById('featured-video-holder').innerHTML = output;
 
-              xhttp.open("GET", "videos.json", true);
-              xhttp.send();
+                      }
+                    };
 
-
-
-
-
-
-
-
+                    xhttp.open("GET", "featured-videos.json", true);
+                    xhttp.send();
 
 
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

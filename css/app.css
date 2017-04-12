@@ -1,3 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 10px 0 0 0; }
+  .header .logo {
+    flex: 1 70%;
+    padding: 5px 0 0 20px; }
+  .header .header-nav {
+    flex: 1 100%;
+    order: 2;
+    margin: 10px 0 0 0; }
+    .header .header-nav span {
+      font-size: 0.625rem; }
+    .header .header-nav a {
+      color: #aaaaaa;
+      font-size: 0.75rem;
+      font-weight: bold; }
+    .header .header-nav a:hover {
+      color: #da3610; }
+      .header .header-nav a:hover span {
+        font-weight: bold;
+        color: #aaaaaa; }
+    .header .header-nav #browse {
+      padding-right: 20px;
+      background-image: url("../../img/drop-icon.png");
+      background-repeat: no-repeat;
+      background-position: right -0px; }
+    .header .header-nav ul {
+      display: flex; }
+    .header .header-nav li {
+      flex: 1;
+      padding: 25px; }
+  .header .search-form {
+    flex: 1 100%;
+    order: 3;
+    padding: 20px 25px 20px 25px; }
+    .header .search-form input {
+      font-size: 0.8125rem;
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      width: 100%;
+      color: #aaaaaa;
+      border: 0.1px solid #eeeeee;
+      background-image: url("../../img/header-searchicon.png");
+      background-repeat: no-repeat;
+      background-position: 6px;
+      padding: 5px 28px; }
+    .header .search-form input::placeholder {
+      color: #aaaaaa; }
+  .header .header-account {
+    flex: 1 30%;
+    order: 1;
+    padding-top: 10px; }
+    .header .header-account .login {
+      color: #888888;
+      font-size: 0.625rem;
+      background-image: url("../../img/key.png"), url("../../img/drop-icon.png");
+      background-repeat: no-repeat;
+      background-position: 0 , right;
+      padding: 2px 15px 2px 15px; }
+
+.hidden {
+  display: none; }
+
+.hero {
+  background-color: #ffa244; }
+
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -15,8 +84,32 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   font-size: 100%;
   font-weight: normal;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+  font-family: 'Lato', sans-serif; }
 
+/* -------------------------- FONT RESPONSIVE TYPOGRAPHY SETTINGS --------------- */
+html {
+  font-size: 100%; }
+  @media (min-width: 48em) {
+    html {
+      font-size: 18px; } }
+  @media (min-width: 62em) {
+    html {
+      font-size: 20px;
+      line-height: 1.4; } }
+  @media (min-width: 75em) {
+    html {
+      font-size: 22px;
+      line-height: 1.5; } }
+
+a {
+  font-family: 'Lato', sans-serif;
+  text-decoration: none; }
+
+li {
+  font-size: 0.875rem; }
+
+/* -------------------------- FONT RESPONSIVE TYPOGRAPHY SETTINGS --------------- */
 main, article, aside, figure, footer, header, nav, section, details, summary {
   display: block; }
 
