@@ -164,24 +164,32 @@
   .footer .footer-flag {
     flex: 1 50%;
     order: 2;
-    background-image: url("../../img/flag.png");
-    background-repeat: no-repeat;
-    background-position: 0 17px;
     padding-left: 45px;
     padding-bottom: 15px;
-    padding-top: 5px; }
-    .footer .footer-flag a {
-      font-size: 0.625rem;
+    padding-top: 5px;
+    padding-right: 10px;
+    position: relative; }
+    .footer .footer-flag #listOfCountry {
+      display: none;
+      position: absolute;
+      background-color: yellow;
+      left: -40px;
+      top: -50px; }
+    .footer .footer-flag #countryList {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      background-image: url("../../img/flag.png"), url("../../img/drop-icon.png");
+      background-repeat: no-repeat;
+      background-position: left,right;
+      font-size: 0.725rem;
       color: #444444;
       line-height: 0;
-      background-image: url("../../img/drop-icon.png");
-      background-repeat: no-repeat;
-      background-position: right 5px;
-      padding-right: 20px;
-      padding-top: 7px;
-      padding-bottom: 10px; }
+      padding: 10px 10px 25px 40px; }
     .footer .footer-flag .country {
-      font-size: 14px; }
+      font-size: 0.9375rem;
+      position: relative;
+      top: 15px; }
   .footer .footer-nav {
     margin: 30px 0 50px 0;
     flex: 1 100%;

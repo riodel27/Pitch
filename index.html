@@ -96,8 +96,12 @@
           </div>
           <div class="footer-flag">
             <!-- <a href="">COUNTRY Philippines</a> -->
-              <a href="#" id="countryList"><span class="ctry">COUNTRY</span> <span id="countryName">Philippines</span></a>
+              <div id="listOfCountry">
+              <h1>Sampds</h1>
 
+              </div>
+              <a href="#" id="countryList">Country <br> <span class="country">Philippines</span> </a>
+              <!-- <span class="Philippines"></span> -->
 
 
           </div>
@@ -121,54 +125,40 @@
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <!-- <script src="js/plugins.js"></script> -->
-        <script src="js/all.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <script src="js/all.js"></script> -->
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
 
-        // $(document).ready(function(){
-        //
-        //   // document.getElementById("countryList").addEventListener("click",displayCountryList);
-        //   //
-        //   //
-        //   // function displayCountryList(){
-        //   // document.getElementById("countryList").innerHTML = "dfasdfasdf";
-        //   // }
-        //   console.log("WOrking");
-        //
-        // });
 
+                  var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                         // Typical action to be performed when the document is ready:
+                         var response = xhttp.responseText;
+                         response = JSON.parse(response);
+                        var videos = response.video;
 
-            //
-            // document.getElementById("demo").innerHTML = "Hello World!";
+                        var output = "";
+                         for(var i =0; i<videos.length; i++){
+                           output += '<img src=' + videos[i].img + '>' +
+                                      '<span class="duration">' + videos[i].duration + '</span>' +
+                                     '<p>' + videos[i].description + '</p>' +
+                                     '<span class="autor">' + videos[i].author + '</span>'+
+                                      '<span class="date">' + videos[i].date + '</span>'+
+                                      '<span class = "views">' + videos[i].views + ' VIEWS' + '</span>'+
+                                     '<hr>;'
+                         }
 
-                  //
-                  // var xhttp = new XMLHttpRequest();
-                  //   xhttp.onreadystatechange = function() {
-                  //     if (this.readyState == 4 && this.status == 200) {
-                  //        // Typical action to be performed when the document is ready:
-                  //        var response = xhttp.responseText;
-                  //        response = JSON.parse(response);
-                  //       var videos = response.video;
-                  //
-                  //       var output = "";
-                  //        for(var i =0; i<videos.length; i++){
-                  //          output += '<img src=' + videos[i].img + '>' +
-                  //                     '<span class="duration">' + videos[i].duration + '</span>' +
-                  //                    '<p>' + videos[i].description + '</p>' +
-                  //                    '<span class="autor">' + videos[i].author + '</span>'+
-                  //                     '<span class="date">' + videos[i].date + '</span>'+
-                  //                     '<span class = "views">' + videos[i].views + ' VIEWS' + '</span>'+
-                  //                    '<hr>;'
-                  //        }
-                  //
-                  //        document.getElementById('featured-video-holder').innerHTML = output;
-                  //
-                  //     }
-                  //   };
-                  //
-                  //   xhttp.open("GET", "featured-videos.json", true);
-                  //   xhttp.send();
+                         document.getElementById('featured-video-holder').innerHTML = output;
+
+                      }
+                    };
+
+                    xhttp.open("GET", "featured-videos.json", true);
+                    xhttp.send();
 
 
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -1,0 +1,13 @@
+{
+  "countries":
+  [
+    {
+      "image": "/img/flag.png",
+      "name": "Philippines"
+    },
+    {
+      "image": "/img/Brazil.png",
+      "name": "Brazil"
+    }
+  ]
+}
